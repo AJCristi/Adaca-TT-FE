@@ -1,3 +1,8 @@
+import 'primereact/resources/themes/viva-light/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
+import "./app.css";
+
 import {
   isRouteErrorResponse,
   Links,
@@ -10,11 +15,6 @@ import {
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
 
 import type { Route } from "./+types/root";
-
-import 'primereact/resources/themes/viva-light/theme.css';
-import 'primereact/resources/primereact.min.css';
-import 'primeicons/primeicons.css';
-import "./app.css";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -46,6 +46,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
     </html>
   );
 }
+
+export function meta() {
+  return [
+    { title: "User List App" },
+    { name: "description", content: "User List App!!" },
+  ];
+}
+
 
 export default function App() {
   return (

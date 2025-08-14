@@ -21,7 +21,7 @@ export default function UserTable({ users }: Props) {
       value={users}
       paginator
       rows={5}
-      onRowClick={(e) => navigate(`/users/${e.data.id}`)}
+      onRowClick={(e) => navigate(`/users/${e.data.id}`, { state: e.data })}
       tableStyle={{ minWidth: '50rem' }}
     >
       <Column field="name" header="Name" />

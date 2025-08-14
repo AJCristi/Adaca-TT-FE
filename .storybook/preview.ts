@@ -1,9 +1,9 @@
-import type { Preview } from '@storybook/react-vite'
-
 import 'primereact/resources/themes/viva-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import "../app/app.css";
+
+import type { Preview } from '@storybook/react-vite'
 
 import { reactRouterParameters, withRouter } from 'storybook-addon-remix-react-router';
 
