@@ -67,7 +67,7 @@ Outputs compiled files to `/dist`
 ~4 hours total:
 - 1.5h Core features (list, detail, routing)
 - 1.5h Storybook setup & mock routing
-- 1h Debugging and styling (PrimeReact + Tailwind)
+- 1h Debugging and styling (PrimeReact + Primeflex)
 
 ## Decisions & Trade-offs
 - Left most of Vite + react router v7 in place in favor of building project
