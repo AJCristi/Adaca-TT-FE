@@ -74,3 +74,4 @@ Outputs compiled files to `/dist`
 - Storybook mock routing, I used storybook-addon-remix-react-router to allow full navigation simulation without backend calls. 
 - Data fetching, I thought about using axios but kept simple fetch() calls for simple calls; in production, would wrap in a custom hook with React Query for caching.
 - Focused more on functionality, barebones design
+- Unfortunately no Express.js/Fastify.js sample routing
