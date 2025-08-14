@@ -1,9 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import UserTable from '~/components/Users/UserTable';
+import { reactRouterParameters } from 'storybook-addon-remix-react-router';
 
 const meta: Meta<typeof UserTable> = {
   title: 'Components/UserTable',
   component: UserTable,
+  parameters: {
+    reactRouter: reactRouterParameters({
+      location: {
+        path: '/users',
+      },
+      routing: { path: '/users' },
+    }),
+  },
 };
 
 export default meta;
