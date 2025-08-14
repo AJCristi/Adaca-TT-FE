@@ -1,13 +1,13 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { Navigate } from "react-router";
+import type { Route } from "../+types/root";
 
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
+export function meta({ }: Route.MetaArgs) {
+    return [
+        { title: "User List" },
+        { name: "description", content: "Users List!" },
+    ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return <Navigate to="/users" replace />;
 }

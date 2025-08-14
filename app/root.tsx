@@ -7,7 +7,13 @@ import {
   ScrollRestoration,
 } from "react-router";
 
+import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
+
 import type { Route } from "./+types/root";
+
+import 'primereact/resources/themes/viva-light/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
 import "./app.css";
 
 export const links: Route.LinksFunction = () => [
@@ -42,7 +48,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <PrimeReactProvider>
+      <Outlet />
+    </PrimeReactProvider>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
